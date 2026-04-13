@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Interativa - Elementos Químicos</title>
+
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🧪 Elementos Químicos Interativos</h1>
+        <p>Passe o mouse sobre os elementos para ver mais informações</p>
+    </header>
+
+    <main>
+        <section class="grid-elementos">
+
+            <!-- EXEMPLO DE CARD -->
+            <!-- Você vai repetir esse padrão para todos -->
+
+            <div class="elemento" data-element="boro">
+                <span class="numero">5</span>
+                <h2 class="simbolo">B</h2>
+                <p class="nome">Boro</p>
+            </div>
+
+            <div class="elemento" data-element="aluminio">
+                <span class="numero">13</span>
+                <h2 class="simbolo">Al</h2>
+                <p class="nome">Alumínio</p>
+            </div>
+
+            <div class="elemento" data-element="gálio">
+                <span class="numero">31</span>
+                <h2 class="simbolo">Ga</h2>
+                <p class="nome">Gálio</p>
+            </div>
+
+            <div class="elemento" data-element="indio">
+                <span class="numero">49</span>
+                <h2 class="simbolo">In</h2>
+                <p class="nome">Índio</p>
+            </div>
+
+            <div class="elemento" data-element="talio">
+                <span class="numero">81</span>
+                <h2 class="simbolo">Tl</h2>
+                <p class="nome">Tálio</p>
+            </div>
+
+            <div class="elemento" data-element="nihonio">
+                <span class="numero">113</span>
+                <h2 class="simbolo">Nh</h2>
+                <p class="nome">Nihônio</p>
+            </div>
+
+            <div class="elemento" data-element="carbono">
+                <span class="numero">6</span>
+                <h2 class="simbolo">C</h2>
+                <p class="nome">Carbono</p>
+            </div>
+
+            <div class="elemento" data-element="silicio">
+                <span class="numero">14</span>
+                <h2 class="simbolo">Si</h2>
+                <p class="nome">Silício</p>
+            </div>
+
+            <div class="elemento" data-element="germanio">
+                <span class="numero">32</span>
+                <h2 class="simbolo">Ge</h2>
+                <p class="nome">Germânio</p>
+            </div>
+
+            <div class="elemento" data-element="estanho">
+                <span class="numero">50</span>
+                <h2 class="simbolo">Sn</h2>
+                <p class="nome">Estanho</p>
+            </div>
+
+            <div class="elemento" data-element="chumbo">
+                <span class="numero">82</span>
+                <h2 class="simbolo">Pb</h2>
+                <p class="nome">Chumbo</p>
+            </div>
+
+            <div class="elemento" data-element="flerovio">
+                <span class="numero">114</span>
+                <h2 class="simbolo">Fl</h2>
+                <p class="nome">Fleróvio</p>
+            </div>
+
+            <div class="elemento" data-element="nitrogenio">
+                <span class="numero">7</span>
+                <h2 class="simbolo">N</h2>
+                <p class="nome">Nitrogênio</p>
+            </div>
+
+            <div class="elemento" data-element="fosforo">
+                <span class="numero">15</span>
+                <h2 class="simbolo">P</h2>
+                <p class="nome">Fósforo</p>
+            </div>
+
+            <div class="elemento" data-element="arsenio">
+                <span class="numero">33</span>
+                <h2 class="simbolo">As</h2>
+                <p class="nome">Arsênio</p>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- MODAL (CAIXA GRANDE DE INFORMAÇÕES) -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="fechar">✖</button>
+
+            <div class="modal-header">
+                <span id="modal-numero"></span>
+                <h2 id="modal-simbolo"></h2>
+                <h3 id="modal-nome"></h3>
+            </div>
+
+            <div class="modal-body">
+                <p><strong>Massa Atômica:</strong> <span id="modal-massa"></span></p>
+                <p><strong>Família:</strong> <span id="modal-familia"></span></p>
+                <p><strong>Camada de Valência:</strong> <span id="modal-camada"></span></p>
+                <p><strong>Ligação:</strong> <span id="modal-ligacao"></span></p>
+                <p><strong>Exemplo:</strong> <span id="modal-exemplo"></span></p>
+                <p><strong>Características:</strong> <span id="modal-caracteristicas"></span></p>
+                <p><strong>Curiosidade:</strong> <span id="modal-curiosidade"></span></p>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<!-- JS -->
+<script src="script.js"></script>
+
+</html>

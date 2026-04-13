@@ -1,0 +1,172 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BASE */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.7;
+}
+
+/* GRID */
+.grid-elementos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* CARD ELEMENTO */
+.elemento {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* HOVER BONITO */
+.elemento:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(59, 130, 246, 0.08);
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.15);
+}
+
+.elemento:active {
+    transform: scale(0.95);
+}
+
+.elemento.ativo {
+    transform: translateY(-6px) scale(1.04);
+    background: rgba(59, 130, 246, 0.2);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.35);
+}
+
+/* TEXTO DO CARD */
+.numero {
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+.simbolo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.nome {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* ESCONDIDO */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* CONTEÚDO DO MODAL */
+.modal-content {
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    animation: aparecer 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ANIMAÇÃO */
+@keyframes aparecer {
+    from {
+        transform: translateY(30px) scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* BOTÃO FECHAR */
+#fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* HEADER DO MODAL */
+.modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#modal-simbolo {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+#modal-nome {
+    opacity: 0.7;
+}
+
+/* BODY DO MODAL */
+.modal-body p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* DETALHE BONITO */
+.modal-body strong {
+    color: #60a5fa;
+}

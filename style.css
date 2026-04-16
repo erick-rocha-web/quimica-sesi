@@ -176,3 +176,25 @@ header p {
 .modal-body strong {
     color: #60a5fa;
 }
+
+/* EXPLOSÃO SIMPLES */
+.elemento.explodindo {
+    animation: explosao 0.4s ease;
+}
+
+@keyframes explosao {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(59, 130, 246, 0);
+    }
+
+    50% {
+        transform: scale(1.25);
+        box-shadow: 0 0 25px rgba(59, 130, 246, 0.9);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(59, 130, 246, 0);
+    }
+}
